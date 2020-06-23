@@ -2,7 +2,8 @@ import React from 'react';
 import {Switch, BrowserRouter, Router, Route } from 'react-router-dom'
 
 import Home from './pages/Home'
-import Entidade from './pages/Entidade';
+import Entidade from './pages/Entidade'
+import Evento from './pages/Evento'
 
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
         <Switch>
           <Route exact path='/' component={Home} />
           <Route exact path='/entidade' component={Entidade} />
+          <Route exact path='/evento' component={Evento} />
         </Switch>
         <h1>footer...</h1>
       </div>    
