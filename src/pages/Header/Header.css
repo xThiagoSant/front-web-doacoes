@@ -1,0 +1,13 @@
+#page-header {
+    display: flex;
+}
+
+#page-header img {
+    height: 7rem;
+}
+
+#page-header .title {
+    display: flex;
+    align-items: center;
+    margin-left: 30%;
+}

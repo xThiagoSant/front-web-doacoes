@@ -1,9 +1,11 @@
 import React from 'react'
 
+import Header from '../Header/Header'
+
 const Entidade = () => {
     return(
         <div>
-            <h1>Entidade</h1>
+            <Header title='Entidade' />        
         </div>
     )
 }

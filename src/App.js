@@ -1,18 +1,18 @@
 import React from 'react';
-import {Switch, BrowserRouter, Router, Route } from 'react-router-dom'
+import {Switch, BrowserRouter, Route } from 'react-router-dom'
 
-import Home from './pages/Home'
-import Entidade from './pages/Entidade'
-import Evento from './pages/Evento'
-import Doacao from './pages/Doacao'
-import Listagem from './pages/listagem'
+import Home from './pages/Home/Home'
+import Entidade from './pages/Entidade/Entidade'
+import Evento from './pages/Evento/Evento'
+import Doacao from './pages/Doacao/Doacao'
+import Listagem from './pages/Listagem/Listagem'
+import './App.css'
 
 
 function App() {
   return (
     <BrowserRouter>
       <div className="App">
-        <h1>header...</h1>
         <Switch>
           <Route exact path='/' component={Home} />
           <Route exact path='/entidade' component={Entidade} />
@@ -20,7 +20,6 @@ function App() {
           <Route exact path='/doacao' component={Doacao} />
           <Route exact path='/listagem' component={Listagem} />
         </Switch>
-        <h1>footer...</h1>
       </div>    
     </BrowserRouter>
     
