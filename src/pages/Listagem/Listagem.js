@@ -1,16 +1,28 @@
-import React from 'react'
+import React, {useState} from 'react'
+import { Redirect } from 'react-router-dom'
 import Header from '../Header/Header'
 import Footer from '../Footer/Footer'
 import 'bootstrap/dist/css/bootstrap.css'
 import './Listagem.css'
 
 const Listagem = () =>{
+    const [logout, setLogout] = useState(false)
+
+    const deslogar = () =>{
+        alert('Seu acesso foi encerrado.')
+        setLogout(true)
+    }
+
+    if(logout){
+        return <Redirect to='/' />
+    }
     return(
         <div>
-            <Header title="Listagem" />
+            <Header title={'Voce é a esperança de alguém'} />
             <hr/>
             <div id="page-listagem">
                 <button style={{marginBottom: '10px'}} className="btn btn-primary btn-add">Adicionar</button>
+                <button onClick={deslogar} style={{marginBottom: '10px'}} className="btn btn-primary btn-add">Sair</button>
                 <table className="table">
                     <thead className="table-dark">
                         <tr>
