@@ -5,7 +5,26 @@ import Header from '../Header/Header'
 import Footer from '../Footer/Footer'
 import './Entidade.css'
 
-const Entidade = () => {
+const Entidade = ({match}) => {
+
+    const rota = () =>{
+        if(match.params.id){
+            //pegar tipo carregado ao entrar
+            const tipoEntidade = 'D'
+
+            if(tipoEntidade === 'O'){
+                return "/listagem"
+            }
+
+            if(tipoEntidade === 'D'){
+                return "/listagem/doador"
+            }
+        }
+        else{
+            return "/"
+        }     
+    }
+
     return(
         <div>
             <Header title="Cadastro de Entidades" />
@@ -60,14 +79,14 @@ const Entidade = () => {
                             Confirmar
                         </Link>
                         
-                        <Link className=" links botao" to="#" >
+                        <Link className=" links botao" to={rota} >
                             Voltar
                         </Link> 
                     </div>
                                 
                 </div> 
             </form>          
-
+            <hr/>
             <Footer />
         </div>
     )

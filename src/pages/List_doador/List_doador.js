@@ -3,7 +3,7 @@ import { Redirect, Link } from 'react-router-dom'
 import Header from '../Header/Header'
 import Footer from '../Footer/Footer'
 import 'bootstrap/dist/css/bootstrap.css'
-import './Listagem.css'
+import './List_doador.css'
 
 const Listagem = () =>{
     const [logout, setLogout] = useState(false)
@@ -18,10 +18,10 @@ const Listagem = () =>{
     }
     return(
         <div>
-            <Header title={'Voce é a esperança de alguém'} />
+            <Header title={'Voce é a esperança de alguém - D'} />
             <hr className="Linha"/>
             <div id="page-listagem">
-                <Link style={{marginBottom: '10px'}} to="/evento" className="btn btn-primary btn-add">Adicionar</Link>
+                <Link style={{marginBottom: '10px'}} to="/doacao" className="btn btn-primary btn-add">Adicionar</Link>
                 <Link style={{marginBottom: '10px'}} to="/entidade/1" className="btn btn-primary btn-add">Seus Dados</Link>
                 <Link onClick={deslogar} style={{marginBottom: '10px'}} to="#" className="btn btn-primary btn-add">Sair</Link>
                 <table className="table">
@@ -41,7 +41,7 @@ const Listagem = () =>{
                             <td>Campo 3</td>
                             <td>Campo 4</td>
                             <td>
-                                <Link className="btn btn-warning" to="evento/1" style={{marginRight: '10px'}}>Editar</Link>
+                                <Link className="btn btn-warning" to="/doacao/1" style={{marginRight: '10px'}}>Editar</Link>
                                 <Link className="btn btn-danger" to="#">Apagar</Link>
                             </td>
                         </tr>   
@@ -52,7 +52,7 @@ const Listagem = () =>{
                             <td>Campo 3</td>
                             <td>Campo 4</td>
                             <td>
-                                <Link className="btn btn-warning" to="evento/1" style={{marginRight: '10px'}}>Editar</Link>
+                                <Link className="btn btn-warning" to="/doacao/1" style={{marginRight: '10px'}}>Editar</Link>
                                 <Link className="btn btn-danger" to="#">Apagar</Link>
                             </td>
                         </tr>  
@@ -63,7 +63,7 @@ const Listagem = () =>{
                             <td>Campo 3</td>
                             <td>Campo 4</td>
                             <td>
-                                <Link className="btn btn-warning" to="#" style={{marginRight: '10px'}}>Editar</Link>
+                                <Link className="btn btn-warning" to="/doacao/1"style={{marginRight: '10px'}}>Editar</Link>
                                 <Link className="btn btn-danger" to="#">Apagar</Link>
                             </td>
                         </tr>                          

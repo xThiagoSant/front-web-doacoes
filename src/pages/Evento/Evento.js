@@ -8,6 +8,7 @@ const Evento = () =>{
     return(
         <div id="page-evento">
             <Header title="Cadastro de Eventos" />
+            <hr className="Linha"/>
             <form action="">
                 <div className="form-row" style={{paddingLeft: '15px'}}>
                     <div className="from-group col-md-1">
@@ -32,16 +33,16 @@ const Evento = () =>{
                 </div>
 
                 <div className="botoes">
-                    <Link className=" links botao" to="#">
+                    <Link className="btn btn-primary" to="/listagem">
                         Confirmar
                     </Link>
                     
-                    <Link className=" links botao" to="#" >
+                    <Link className="btn btn-primary" to="/listagem" >
                         Voltar
                     </Link>                            
                 </div>
             </form>
-
+            <hr/>
             <Footer />
         </div>
     )

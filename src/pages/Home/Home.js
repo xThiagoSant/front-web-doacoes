@@ -6,28 +6,51 @@ import Header from '../Header/Header'
 import Footer from '../Footer/Footer'
 
 const Home = () =>{
-    const [success, setSuccess] = useState(false)
+    const [loginOn, setLoginOn] = useState(false)
+    const [routeEnt, setRouteEnt] = useState('/')
 
     const Login = () =>{
         //Requisição axios para validar o login
-        setSuccess(true)
+        const conseguiuLogin = 'SIM'
+
+        if(conseguiuLogin === 'SIM'){
+            setLoginOn(true)
+            //pegar o tipo da entidade
+            const tipoEntidade = 'D'
+
+            if(tipoEntidade === 'O'){
+                setRouteEnt('/listagem')
+            }
+
+            if(tipoEntidade === 'D'){
+                setRouteEnt('/listagem/doador')
+            }
+        }
+        else{
+            alert('Falha no login.')
+        }
     }
 
-    if(success){
-        return  <Redirect to='/listagem'/>
+    if (loginOn){
+        return <Redirect to={routeEnt} />
     }
+
     return (
         <section id='page-home' className='pagina'>
             <Header title='Voce é a esperança de alguém'/>
-            <hr/>
+            <hr className="Linha"/>
             <div className='container'>
                 <div className='dados'>
                     <div className='login dado'>
                         <h1>Entrar</h1>
                         <div><FiLogIn /> <input type="text"/></div>
                         <div><FiLock /> <input type="password" /></div>
-                        <div><button onClick={Login} className="btn btn-primary">Entrar</button></div>
-                        <div><Link className='linklog' to='#'>Esqueci minha senha.</Link></div>                        
+                        <div>                     
+                            <button onClick={Login} className="btn btn-primary">Entrar</button>
+                        </div>
+                        <div>
+                            <Link className='linklog' to="#">Esqueci minha senha.</Link>
+                        </div>                        
                     </div>
 
                     <div className='registro dado'>
@@ -39,6 +62,7 @@ const Home = () =>{
                     </div>            
                 </div>
             </div> 
+            <hr/>
             <Footer />       
         </section>
     )

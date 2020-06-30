@@ -1,0 +1,11 @@
+#page-doacao .botoes {
+    margin-left: 0.8rem; 
+}
+
+#page-doacao .botoes * {
+    margin: 2px; 
+}
+
+#page-doacao .tipo {
+    margin-left: 29px;
+}
