@@ -55,14 +55,14 @@ const Entidade = () => {
                         <textarea id="obs" cols="30" rows="10" placeholder="Observações"></textarea>
                     </div>
                     
-                    <div className="linha-6 dado ">
-                        <Link className=" links botao" to="#" >
+                    <div className="linha-6 dado">
+                        <Link className=" links botao" to="#">
                             Confirmar
                         </Link>
                         
                         <Link className=" links botao" to="#" >
                             Voltar
-                        </Link>                            
+                        </Link> 
                     </div>
                                 
                 </div> 

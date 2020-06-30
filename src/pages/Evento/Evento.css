@@ -1,0 +1,7 @@
+#page-evento .botoes {
+    margin-left: 0.8rem; 
+}
+
+#page-evento .botoes * {
+    margin: 2px; 
+}
