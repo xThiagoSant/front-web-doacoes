@@ -6,7 +6,7 @@ const Header = (props) =>{
     return (
         <div id='page-header'>
             <img src={Logo} alt="LogoMarca"/>
-            <h2 className='title'>Cadastro de Entidades</h2>
+            <h2 className='title'>{props.title}</h2>          
         </div>
     )
 }

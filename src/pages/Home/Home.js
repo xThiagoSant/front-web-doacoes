@@ -11,8 +11,8 @@ const Home = () =>{
                     <div className='login dado'>
                         <h1>Entrar</h1>
                         <div><FiLogIn /> <input type="text"/></div>
-                        <div><FiLock /> <input type="text"/></div>
-                        <div><Link className='links linklog botao' to='#'>Entrar</Link></div>                                                  
+                        <div><FiLock /> <input type="password" /></div>
+                        <div><Link className='links linklog botao' to='/listagem'>Entrar</Link></div>                                                  
                         <div><Link className='linklog' to='#'>Esqueci minha senha.</Link></div>                        
                     </div>
 
@@ -21,7 +21,7 @@ const Home = () =>{
                         <p>
                             Cadastre agora mesmo e inicie seus eventos beneficentes, ajudando quem mais precisa.
                         </p>
-                        <Link className='links botao' to='#' >Cadastrar</Link>                        
+                        <Link className='links botao' to='/entidade' >Cadastrar</Link>                        
                     </div>            
                 </div>
             </div>        

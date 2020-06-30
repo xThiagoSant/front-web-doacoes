@@ -15,3 +15,22 @@ body {
     background: #edfae2;
     min-height: 100vh;
 }
+
+.links {
+    background-color: blue;
+    color: white;
+    text-decoration: none;
+    padding: 10px 25px;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
+}
+
+.links.botao {
+    padding: 0.25rem 1.5rem;
+    text-align: center;
+    margin: auto;
+} 
+
+.Linha {
+    margin-bottom: 1rem;
+}
